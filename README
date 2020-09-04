@@ -1,0 +1,8 @@
+registry.cn-hangzhou.aliyuncs.com/synbop/emqttd
+1.拉取镜像
+docker pull registry.cn-hangzhou.aliyuncs.com/synbop/emqttd:2.3.6
+2.安装镜像
+docker run --name emq -p 8140:18083 -p 8141:1883 -p 8142:8084 -p 8143:8883 -p 8144:8083 -d registry.cn-hangzhou.aliyuncs.com/synbop/emqttd:2.3.6
+说明：tcp端口 1883   ssl端口8883   管理平台端口 18083 admin/public
+
+demo支持多mqtt服务实例，断线自动重连
